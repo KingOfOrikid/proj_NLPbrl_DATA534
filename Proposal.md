@@ -1,0 +1,13 @@
+# Project Proposal - NLPbrl
+
+## Group information
+- Group name: Ctrl Alt Del
+- Members of the group: Siyue Gao (11964889), Yuxin Chen (91339903)
+
+## Description and Motivation of the API
+- Motivation to work on the API: Natural Language Processing(NLP) is an important direction in Computer Science and Artificial Intelligent domains. It studies theories and methods that enable effective communication between computers and humans using natural language. NLP can be used in many applications like Question&Answer System, Spam Email Program, Voice Assistants and Translate, etc. An advanced and completer NLP application usually can be divided into two parts: Natural Language Understanding(NLU) and Natural Language Generation(NLG), which two aspects can also be divided into many small tasks such as Tokenization, Syntax Parsing, and Text Mining. So when we need to work on some big applications, it is very complicated to begin with the basic tasks. At this time, the Rosette Text Analytics API will be extremely powerful because it can help user to achieve many underlying tasks of NLP which makes completing an application much easier and more efficient.
+- Description of the API: The NLPbrl wrapper API is a package for wrapping The Rosette Text Analytics API's functions. It can use natural language processing, and machine learning to analyze unstructured and semi-structured text in multilingual. It can provide a large number of powerful text analyses which has largely helped people to learn about natural language processing and to develop various applications for processing text.
+
+## Intended users and outcome
+- Description of the intended users: 
+- Description of the outcome: 
