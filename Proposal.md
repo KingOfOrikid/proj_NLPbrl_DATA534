@@ -9,5 +9,5 @@
 - Description of the API: The NLPbrl wrapper API is a package for wrapping The Rosette Text Analytics API's functions. It can use natural language processing, and machine learning to analyze unstructured and semi-structured text in multilingual. It can provide a large number of powerful text analyses which has largely helped people to learn about natural language processing and to develop various applications for processing text.
 
 ## Intended users and outcome
-- Description of the intended users: 
-- Description of the outcome: 
+- Description of the intended users: People who want to learn NLP or need to implement large projects in NLP.
+- Description of the outcome: By calling and wrapping several endpoints in API, implementing the tasks of NLP perfectly so that users can easily manipulate the text to get information about entities, text categories, entity relationships, etc. for good use in NLP projects. We can use it to break down long texts such as sentences, paragraphs, and articles into word-based data structures for subsequent processing and analysis. And Word frequency statistics can count the number of occurrences of each non-stop word in the article, which allows the extraction of article keywords and the mapping of word clouds. Also, it can perform the calculation of word vector similarity, facilitates the building of neural networks based on this.  The NLPbrl package also can categorize articles, detect language, etc.
