@@ -12,8 +12,9 @@ class NLP():
     def __init__(self):
         self.api_data = Data()
 
+    #Cleaning of the input text according to the specified deactivation lexicon.
     def __word_wash(self, text, stop_word='default'):
-        #determine language
+        #Determine language
         if stop_word == 'default':
             try:
                 lang = self.api_data.get_lang(text[:100])
@@ -26,8 +27,9 @@ class NLP():
                 stop_word = 'pacakge_data/en_stopwords.txt'
             else:
                 stop_word = 'pacakge_data/other_stopwords.txt'
+        #Use no stopwords
         elif stop_word == 'None':
-            #check the characters limit
+            #check the characters limit, api's limit is 5000
             text_lst = self.__check_limit(text)
             text_token = []
             try:
@@ -48,7 +50,7 @@ class NLP():
             print('{} is not exist, please check the file!'.format(stop_word))
             return False
 
-        #check the characters limit
+        #check the characters limit, api's limit is 5000
         text_lst = self.__check_limit(text)
         text_token = []
         try:
@@ -66,6 +68,7 @@ class NLP():
                 washed_token.append(char)
         return washed_token
 
+    #Word frequency statistics on the input text, returning the frequency corresponding to each word.
     def cal_frequency(self, text, stop_word='default'):
         washed_token = self.__word_wash(text, stop_word)
         if washed_token == False:
@@ -77,6 +80,7 @@ class NLP():
         counts = sorted(counts.items(), key=lambda x: x[1], reverse=True)
         return counts
 
+    #Since the api limits input to 5000 characters, need to check the input text and split the length
     def __check_limit(self, text):
         text = text.replace('\n', ' ')
         if len(text.replace(' ', '')) <= 5000:
@@ -91,7 +95,7 @@ class NLP():
                 true_text = self.__check_limit_tool(text, '')
         return true_text
 
-
+    #Split the text
     def __check_limit_tool(self, text, symbol):
         temp = []
         string = ''
@@ -111,6 +115,7 @@ class NLP():
                 temp.append(string)
         return temp
 
+    #Word frequency visualization, save word cloud chart and line chart. Can choose how many words to be show.
     def word_viz(self, text, file_loc, top_num, stop_word='default', cloud_set=WordCloud(font_path='pacakge_data/STKAITI.TTF')):
         washed_token = self.__word_wash(text, stop_word)
         
@@ -149,9 +154,8 @@ class NLP():
             return False
         return True
 
-    #text: text which needs to be calculate tfidf
-    #document: document_loc to train idf
-    #topK, keywords for top x
+    #text: text which needs to be calculate tfidf; document: document_list to train idf
+    #Calculate the TF-IDF value of a text from documents.
     def key_extra_tfidf(self, text, document, stop_word='default'):
         if len(text)==0 or len(document)==0 or type(document)!=list:
             print('Error with input type and content.')
@@ -168,12 +172,13 @@ class NLP():
         if text_wash == False:
             return False
 
-        #word dictionary
+        #vocabulary
         set_lst = []
         for i in text_wash_lst:
             set_lst.extend(i)
         wordSet = set(set_lst)
 
+        #word dictinary of all documents
         wordDict_lst = []
         for wash_token in text_wash_lst:
             temp_dic = dict.fromkeys(wordSet, 0)
@@ -221,6 +226,8 @@ class NLP():
             tfidf[word] = tf_val * idf[word]
         return tfidf
 
+    #Calculate two texts' similarity with word/sentence embedding
+    #Can choose the method of calculating distance from  euclidean metric, cosine distance, jaccard similarity
     def cal_simi(self, text1, text2, size='sen', method='euc'):
         try:
             token_1 = self.api_data.get_token(text1)
@@ -289,6 +296,7 @@ class NLP():
         union = (len(token_1) + len(token_1)) - inter
         return float(inter) / union
 
+    #Get top k keywords through text rank algorithm, can choose the kinds of candidate pos you want to keep
     def cal_textRank(self, text, candidate_pos=['NOUN', 'PROPN', 'VERB'], top_k = 10, window_size=3, stop_word='default'):
         #damping coefficient
         damp = 0.85
@@ -419,6 +427,7 @@ class NLP():
                 break
         return keywords_lst
 
+    #Get the entites relationships in the input text and visualization it through a graph chart.
     def relation_viz(self, text):
         text_lst = self.__check_limit(text)
         relations = []
@@ -441,6 +450,7 @@ class NLP():
         g.view()
         return True
 
+    #Return to the k most likely subject categories for the input text
     def cal_classification(self, text, top_k = 3):
         try:
             classify = self.api_data.get_classification(text)
