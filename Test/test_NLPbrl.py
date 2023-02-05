@@ -1,6 +1,6 @@
 import unittest
-import sys
-sys.path.append('C:/Users/Yuxin Chen/Desktop/proj_NLPbrl_DATA534/')
+import sys, os
+sys.path.append(os.path.abspath(os.path.join(os.getcwd(), "..")))
 from NLPbrl import NLP_
 
 
