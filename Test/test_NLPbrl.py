@@ -78,4 +78,3 @@ class TestProj(unittest.TestCase):
         self.assertEqual(self.nlp.cal_classification(self.cate_text),self.cate_res)
         self.assertEqual(self.nlp.cal_classification(self.cate_text, 100),False)
         self.assertEqual(self.nlp.cal_classification(self.empty_text),False)
-        
