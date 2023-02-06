@@ -1,5 +1,5 @@
 # NLPbrl Project        [![KingOfOrikid](https://circleci.com/gh/KingOfOrikid/proj_NLPbrl_DATA534.svg?style=shield)](https://app.circleci.com/pipelines/github/KingOfOrikid/proj_NLPbrl_DATA534?branch=main)
-**Pypi**: **link**     
+**Pypi**: **[https://pypi.org/project/NLPbrl/0.1/](https://pypi.org/project/NLPbrl/0.1/)**     
 **Package demo video**: **link**            
             
 ## Group information          
