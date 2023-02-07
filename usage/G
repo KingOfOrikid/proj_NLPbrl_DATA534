@@ -1,14 +1,8 @@
 graph "graph" {
-	"FLIR Systems"
-	Oregon
-	"FLIR Systems" -- Oregon [label="Organization Headquarters" len=1.50]
-	Timms
-	Dubai
-	Timms -- Dubai [label="Citizen of" len=1.50]
-	Timms
-	FLIR
-	Timms -- FLIR [label="Person Employee or Member of" len=1.50]
-	FLIR
-	Timms
-	FLIR -- Timms [label="Organization top employees" len=1.50]
+	"Joe Biden"
+	"U.S."
+	"Joe Biden" -- "U.S." [label="Citizen of" len=1.50]
+	"Bernard Baumohl"
+	"Economic Outlook Group"
+	"Bernard Baumohl" -- "Economic Outlook Group" [label="Person Employee or Member of" len=1.50]
 }
