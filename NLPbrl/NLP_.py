@@ -117,15 +117,18 @@ class NLP():
                 temp.append(string)
         return temp
 
-    #Word frequency visualization, save word cloud chart and line chart. Can choose how many words to be show.
-    def word_viz(self, text, file_loc, top_num, stop_word='default', cloud_set=WordCloud(font_path='NLPbrl/pacakge_data/STKAITI.TTF')):
+    #Word frequency visualization, save word cloud chart and circle chart. Can choose how many words to be show.
+    def word_viz(self, text, file_loc, top_num, stop_word='default', cloud_set=WordCloud(font_path='NLPbrl/pacakge_data/STKAITI.TTF', collocations=False)):
         washed_token = self.__word_wash(text, stop_word)
         
         if washed_token == False:
             return False
         
+        if top_num >= len(washed_token):
+            top_num = len(washed_token) - 1
+
         try:
-            cloud_set.generate(' '.join(washed_token))
+            cloud_set.generate(' '.join(washed_token[:top_num]))
         except:
             print("Error with word cloud.")
             return False
@@ -144,11 +147,9 @@ class NLP():
             count.append(i[1])
         df = pd.DataFrame({'words': words, 'count': count})
         
-        if top_num >= len(df):
-            top_num = len(df) - 1
             
-        chart = (alt.Chart(df[:top_num]).mark_line().encode(
-            x='words', y='count').properties(height=400, width=400))
+        chart = (alt.Chart(df[:top_num]).mark_circle(size = 200, opacity = 0.65).encode(
+            x='words', y='count', color = alt.value('darkblue')).properties(height=400, width=400))
         try:
             save(chart, "chart.html")
         except:
@@ -464,4 +465,7 @@ class NLP():
             print('The k exceed the number of categories')
             return False
         else:
-            return classify[:top_k]
+            labels = []
+            for i in range(0,top_k):
+                labels.append(classify[i]['label'])
+            return labels
