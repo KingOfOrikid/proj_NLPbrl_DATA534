@@ -1,5 +1,5 @@
 # NLPbrl Project        [![KingOfOrikid](https://circleci.com/gh/KingOfOrikid/proj_NLPbrl_DATA534.svg?style=shield)](https://app.circleci.com/pipelines/github/KingOfOrikid/proj_NLPbrl_DATA534?branch=main)
-**Pypi**: **[https://pypi.org/project/NLPbrl/0.1/](https://pypi.org/project/NLPbrl/0.1/)**     
+**Pypi**: **[https://pypi.org/project/NLPbrl/](https://pypi.org/project/NLPbrl/)**     
 **Package demo video**: **link**            
             
 ## Group information          
@@ -79,7 +79,7 @@ cate_text = "Sony Pictures is planning to shoot a good portion of the new \"Ghos
 A simple example of using the cal_frequency() function in the package to obtain word frequency statistics for each word in the input text. Word frequency statistics can summarize the words that appear frequently in the document and help to understand the text quickly, and they are also the basis for many NLP analyses and processes.
 ![cal_frequency](imgs/cal_frequency.png)   
 
-A simple example of using the word_viz() function in the package to visualisation of the word frequency statistics of the input text, including the visualisation of word clouds and word frequency line graphs, and the ability to select the number of words to be visualised.
+A simple example of using the word_viz() function in the package to visualisation of the word frequency statistics of the input text, including the visualisation of word clouds and word frequency circle graphs, and the ability to select the number of words to be visualised.
 ![word_viz_code](imgs/word_viz_code.png)   
 ![word_viz_cloud](imgs/word_viz_cloud.png)    
 ![word_viz_chart](imgs/word_viz_chart.png)    
@@ -97,7 +97,7 @@ A simple example of using the relation_viz() function in the package to obtain a
 ![relation_viz_code](imgs/relation_viz_code.png)    
 ![relation_viz_graph](imgs/relation_viz_graph.png)    
 
-A simple example of using the c() function in the package to obtain the k classifications to which the text is most likely to belong, where the classifications are Arts & Entertainment, Travel, Business, Automotive, Education, Careers, Food & Drink and so on.
+A simple example of using the cal_classification() function in the package to obtain the k classifications to which the text is most likely to belong, where the classifications are Arts & Entertainment, Travel, Business, Automotive, Education, Careers, Food & Drink and so on.
 ![cal_classification](imgs/cal_classification.png)   
 
 ## How to Contribute
