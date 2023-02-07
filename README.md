@@ -77,28 +77,31 @@ cate_text = "Sony Pictures is planning to shoot a good portion of the new \"Ghos
 ```
 
 A simple example of using the cal_frequency() function in the package to obtain word frequency statistics for each word in the input text. Word frequency statistics can summarize the words that appear frequently in the document and help to understand the text quickly, and they are also the basis for many NLP analyses and processes.
-![cal_frequency](imgs/cal_frequency.png)   
+<div align=center>![cal_frequency](imgs/cal_frequency.png)   
 
 A simple example of using the word_viz() function in the package to visualisation of the word frequency statistics of the input text, including the visualisation of word clouds and word frequency circle graphs, and the ability to select the number of words to be visualised.
-![word_viz_code](imgs/word_viz_code.png)   
-![word_viz_cloud](imgs/word_viz_cloud.png)    
-![word_viz_chart](imgs/word_viz_chart.png)    
+<div align=center>![word_viz_code](imgs/word_viz_code.png)    
+               
+<div align=center>![word_viz_cloud](imgs/word_viz_cloud.png)       
+               
+<div align=center>![word_viz_chart](imgs/word_viz_chart.png)             
 
 A simple example of using the key_extra_tfidf() function in the package to obtain the tf-idf score of words in the input text in the context of a corpus, the TF-IDF can be used to assess the degree of importance of a word for a document set or one of the documents in a corpus. The more often a word appears in a text, and the less often it appears in all documents, the more representative it is of that text.
-![key_extra_tfidf](imgs/key_extra_tfidf.png)    
+<div align=center>![key_extra_tfidf](imgs/key_extra_tfidf.png)              
 
 A simple example of using the cal_simi() function in the package to calculate the similarity between two entities, the function can choose whether to use word embedding or sentence embedding, and also whether to use euclidean distance, cosine distance or jaccard for the calculation.
-![cal_simi](imgs/cal_simi.png)    
+<div align=center>![cal_simi](imgs/cal_simi.png)             
 
 A simple example of using the cal_textRank() function in the package to get the top k keywords of the text by the textRank function.
-![cal_textRank](imgs/cal_textRank.png)    
+<div align=center>![cal_textRank](imgs/cal_textRank.png)            
 
 A simple example of using the relation_viz() function in the package to obtain and visualise the relationships between entities embedded in the text using a graph.
-![relation_viz_code](imgs/relation_viz_code.png)    
-![relation_viz_graph](imgs/relation_viz_graph.png)    
+<div align=center>![relation_viz_code](imgs/relation_viz_code.png)     
+                    
+<div align=center>![relation_viz_graph](imgs/relation_viz_graph.png)           
 
 A simple example of using the cal_classification() function in the package to obtain the k classifications to which the text is most likely to belong, where the classifications are Arts & Entertainment, Travel, Business, Automotive, Education, Careers, Food & Drink and so on.
-![cal_classification](imgs/cal_classification.png)   
+<div align=center>![cal_classification](imgs/cal_classification.png)   
 
 ## How to Contribute
 Please note that this project is released with a [Contributor Code of
