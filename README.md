@@ -30,6 +30,7 @@ NLPbrlpackage
 | LICENSE.md
 | requirements.txt
 └─── NLPbrl 
+    | config.ini
     | Data_.py
     └─── Data (class)
         | get_token: Text tokenization
