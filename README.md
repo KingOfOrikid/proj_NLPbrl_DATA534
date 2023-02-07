@@ -1,4 +1,4 @@
-# NLPbrl Project        [![KingOfOrikid](https://circleci.com/gh/KingOfOrikid/proj_NLPbrl_DATA534.svg?style=shield)](https://app.circleci.com/pipelines/github/KingOfOrikid/proj_NLPbrl_DATA534?branch=main)
+# NLPbrl Project     [![PyPI version](https://badge.fury.io/py/NLPbrl.svg)](https://badge.fury.io/py/NLPbrl)   [![KingOfOrikid](https://circleci.com/gh/KingOfOrikid/proj_NLPbrl_DATA534.svg?style=shield)](https://app.circleci.com/pipelines/github/KingOfOrikid/proj_NLPbrl_DATA534?branch=main)
 **Pypi**: **[https://pypi.org/project/NLPbrl/](https://pypi.org/project/NLPbrl/)**     
 **Package demo video**: **link**            
             
