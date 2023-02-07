@@ -1,6 +1,6 @@
 # NLPbrl Project     [![PyPI version](https://badge.fury.io/py/NLPbrl.svg)](https://badge.fury.io/py/NLPbrl)   [![KingOfOrikid](https://circleci.com/gh/KingOfOrikid/proj_NLPbrl_DATA534.svg?style=shield)](https://app.circleci.com/pipelines/github/KingOfOrikid/proj_NLPbrl_DATA534?branch=main)
 **Pypi**: **[https://pypi.org/project/NLPbrl/](https://pypi.org/project/NLPbrl/)**     
-**Package demo video**: **link**            
+**Package demo video**: **[https://youtu.be/Oy_dCew31j0](https://youtu.be/Oy_dCew31j0)**            
             
 ## Group information          
 - **Group name: Ctrl-Alt-Del**          
@@ -107,3 +107,7 @@ cate_text = "Sony Pictures is planning to shoot a good portion of the new \"Ghos
 Please note that this project is released with a [Contributor Code of
 Conduct](https://github.com/KingOfOrikid/proj_NLPbrl_DATA534/blob/main/Code%20of%20Conduct.md).
 By participating in this project you agree to abide by its terms.
+
+## Personal Notebook
+Sherry(Siyue) Gao: https://github.com/sherriyiou/534project_personal       
+Yuki(Yuxin) Chen: https://github.com/KingOfOrikid/per_proj          
