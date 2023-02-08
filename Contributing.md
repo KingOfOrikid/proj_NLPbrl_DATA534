@@ -25,4 +25,4 @@ README.md|build passing stamp
 code update|Contributing.md
 usage imgs|Code of conduct
 
-![contributing](Contributing.png)   
+<div align=center><img src="imgs/Contributing.png"></div>             
